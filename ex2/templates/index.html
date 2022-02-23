@@ -1,0 +1,13 @@
+<!-- This file gets the user to input an integer to check if it is even or odd -->
+<!-- W3Schools was primarily used here https://www.w3schools.com/html/default.asp -->
+{% extends '_format.html' %}
+
+{% block body %}
+<h1>Home</h1>
+<p>Enter an integer to see if it's even or odd</p>
+<p>Number</p>
+<form action="/result" method="get">
+    <input type="text" name="integer" id="integer" autocomplete="off">
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}

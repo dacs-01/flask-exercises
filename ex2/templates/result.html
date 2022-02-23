@@ -1,0 +1,20 @@
+<!-- This file checks if the integer is an integer, then checks if it is even or odd. -->
+<!-- This was inspired by Stackoverflow https://stackoverflow.com/questions/5424716/how-to-check-if-string-input-is-a-number -->
+
+{% extends '_format.html' %}
+
+{% block body %}
+<h1>Calculate</h1>
+<p>Number</p>
+{% if input|string == 'invalid' %} <!-- converts the input into string 'invalid'-->
+    <p>This is not an integer!</p>
+{% elif input % 2 == 0 %} <!-- checks for even -->
+    <p>{{ input }} is even</p>
+{% else %} <!-- checks for odd -->
+    <p>{{ input }} is odd</p>
+
+{% endif %}
+
+<a href="/">Go home</a>
+
+{% endblock %}

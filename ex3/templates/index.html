@@ -1,0 +1,34 @@
+<!-- This is the index HTML file for acquiring the name and organization inputs. 
+This page implements a text box and a dropdown menu that gets the required inputs. -->
+
+<!-- Most of the html was used from Bootstrap https://bootstrap-cheatsheet.themeselection.com/ 
+and W3Schools https://www.w3schools.com/html/default.asp -->
+
+{% extends '_format.html' %}
+
+{% block body %}
+<h1>Home</h1>
+<p>Use the following form to register for a student organization</p>
+<form action="/result" method="post">
+    <label for="formControlInput" class="form-label">Enter name</label>
+    <br>
+    <input type="text" name="name" id="name" autocomplete="off">
+    <br>
+        <label>Select Organization</label>
+        <br>
+        <select class="dropdown" name="organization" id="organization">
+            <option value = "Charlotte Hack"> Charlotte Hack   
+            </option>  
+            <option value = "Code9"> Code9   
+            </option>  
+            <option value = "49er IT"> 49er IT  
+            </option>  
+            <option value = "SGA"> SGA  
+            </option>
+            <option value = "Intramural Sports"> Intramural Sports  
+            </option> 
+        </select>
+        <br>
+    <input type="submit" value="Register" class="btn btn-primary">
+</form>
+{% endblock %}
